@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte - Em Construção</title>
+</head>
+<body>
+    <div style="text-align: center; font-family: sans-serif; margin-top: 100px;">
+        <h1 style="color: orange;">🚧 Em construção 🚧</h1>
+        <p>Estamos preparando o seu ambiente de trabalho...</p>
+        <p>Você será redirecionado em instantes.</p>
+    </div>
+
+    <script>
+        var parametros = new URLSearchParams(window.location.search);
+        var destino = parametros.get("destino");
+
+        if(destino) {
+            setTimeout(function() {
+                window.location.href = destino;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

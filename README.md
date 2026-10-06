@@ -1,6 +1,6 @@
 # Sistema de Chamados de Suporte Técnico
 
-## Integrantes do Grupo       Prontuário
+## Integrantes do Grupo  
 
 - **André Nascimento Ressude**    -  BP3061256
 - **Cassio Cavallaro Ferro**      -  BP3060934

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte - Erro</title>
+</head>
+<body>
+    <div style="text-align: center; font-family: sans-serif; margin-top: 50px;">
+        <h2>Sistema de Chamados de Suporte</h2>
+        <h3>Prática</h3>
+        <hr style="width: 50%;">
+        
+        <br>
+        <h3 id="mensagemErro" style="color: red;">Erro no acesso</h3>
+        
+        <button onclick="window.location.href='index.html'">VOLTAR</button>
+    </div>
+
+    <script>
+        var parametros = new URLSearchParams(window.location.search);
+        var erro = parametros.get("erro");
+        
+        if(erro) {
+            document.getElementById("mensagemErro").innerText = erro;
+        }
+    </script>
+</body>
+</html>

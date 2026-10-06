@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte - Login</title>
+</head>
+<body>
+    <div style="text-align: center; font-family: sans-serif; margin-top: 50px;">
+        <h2>Sistema de Chamados de Suporte</h2>
+        <h3>Prática</h3>
+        <hr style="width: 50%;">
+        
+        <br>
+        <label>USUÁRIO</label>
+        <input type="text" id="usuario"><br><br>
+        
+        <label>SENHA</label>
+        <input type="password" id="senha"><br><br>
+        
+        <button onclick="fazerLogin()">ENTRAR</button>
+    </div>
+
+    <script>
+        function fazerLogin() {
+            var usu = document.getElementById("usuario").value;
+            var sen = document.getElementById("senha").value;
+
+ 
+            if(usu === "" || sen === "") {
+                window.location.href = "erro.html?erro=Preencher usuário e senha";
+                return;
+            }
+
+            if(usu === "admin" && sen === "admin123") {
+                window.location.href = "construcao.html?destino=administrador.html";
+            } else if(usu === "tecnico" && sen === "suporte123") {
+                window.location.href = "construcao.html?destino=operador.html";
+            } else {
+                localStorage.setItem("erroAtual", "Usuário ou senha inválidos");
+                window.location.href = "erro.html";
+            }
+        }
+    </script>
+</body>
+</html>
